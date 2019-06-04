@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :order_products
-  resources :orders
-  resources :products
-  get 'store/index'
+  namespace :admin do
+      resources :users
+      resources :orders
+      resources :products
+
+      root to: "users#index"
+  end
+
+  # resources :order_products
+  # resources :orders
+  # resources :products
+  # get 'store/index'
   devise_for :users, controllers: {
       registrations: 'registrations' ,
       confirmations: 'confirmations'
