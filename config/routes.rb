@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :categories
   resources :line_items
   resources :orders
   namespace :admin do
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
       resources :products
       resources :orders
       resources :line_items
+      resources :categories
 
       root to: "users#index"
   end
