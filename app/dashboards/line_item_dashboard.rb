@@ -25,7 +25,6 @@ class LineItemDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :order,
     :product,
-    :id,
     :quantity,
   ].freeze
 
@@ -34,11 +33,8 @@ class LineItemDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :order,
     :product,
-    :id,
     :quantity,
     :unit_price,
-    :created_at,
-    :updated_at,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -54,7 +50,7 @@ class LineItemDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how line items are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(line_item)
-  #   "LineItem ##{line_item.id}"
-  # end
+  def display_resource(line_item)
+    "product #{line_item.product.name} from order #{line_item.order.id}"
+  end
 end

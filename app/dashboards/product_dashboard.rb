@@ -24,23 +24,20 @@ class ProductDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :line_items,
     :id,
     :name,
     :category,
+    :line_items,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :line_items,
-    :category,
-    :id,
     :name,
     :description,
     :price,
-    :created_at,
-    :updated_at,
+    :category,
+    :line_items,
   ].freeze
 
   # FORM_ATTRIBUTES

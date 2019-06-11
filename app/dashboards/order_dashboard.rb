@@ -23,20 +23,17 @@ class OrderDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :user,
-    :line_items,
-    :id,
     :order_date,
+    :line_items,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :user,
-    :line_items,
     :id,
+    :user,
     :order_date,
-    :created_at,
-    :updated_at,
+    :line_items,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -51,7 +48,7 @@ class OrderDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how orders are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(order)
-  #   "Order ##{order.id}"
-  # end
+  def display_resource(order)
+    "#{order.id}"
+  end
 end
