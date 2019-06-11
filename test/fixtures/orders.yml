@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order_date: 2019-06-02 00:24:13
-  users: one
+  order_date: 2019-06-11 16:07:07
+  user: one
 
 two:
-  order_date: 2019-06-02 00:24:13
-  users: two
+  order_date: 2019-06-11 16:07:07
+  user: two

@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class OrderProductDashboard < Administrate::BaseDashboard
+class LineItemDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,12 +8,11 @@ class OrderProductDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    product: Field::BelongsTo,
     order: Field::BelongsTo,
+    product: Field::BelongsTo,
     id: Field::Number,
-    products_id: Field::Number,
-    orders_id: Field::Number,
     quantity: Field::Number,
+    unit_price: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,19 +23,20 @@ class OrderProductDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :orders_id,
-    :products_id,
+    :order,
+    :product,
+    :id,
+    :quantity,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :product,
     :order,
+    :product,
     :id,
-    :products_id,
-    :orders_id,
     :quantity,
+    :unit_price,
     :created_at,
     :updated_at,
   ].freeze
@@ -45,17 +45,16 @@ class OrderProductDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :product,
     :order,
-    :products_id,
-    :orders_id,
+    :product,
     :quantity,
+    :unit_price,
   ].freeze
 
-  # Overwrite this method to customize how order products are displayed
+  # Overwrite this method to customize how line items are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(order_product)
-  #   "OrderProduct ##{order_product.id}"
+  # def display_resource(line_item)
+  #   "LineItem ##{line_item.id}"
   # end
 end

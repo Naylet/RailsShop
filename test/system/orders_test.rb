@@ -15,7 +15,7 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "New Order"
 
     fill_in "Order date", with: @order.order_date
-    fill_in "Users", with: @order.users_id
+    fill_in "User", with: @order.user_id
     click_on "Create Order"
 
     assert_text "Order was successfully created"
@@ -27,7 +27,7 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Order date", with: @order.order_date
-    fill_in "Users", with: @order.users_id
+    fill_in "User", with: @order.user_id
     click_on "Update Order"
 
     assert_text "Order was successfully updated"

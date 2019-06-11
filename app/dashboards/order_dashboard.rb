@@ -8,12 +8,12 @@ class OrderDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-      :user => Field::BelongsTo,
-      :id => Field::Number,
-      :order_date => Field::DateTime,
-      :users_id => Field::Number,
-      :created_at => Field::DateTime,
-      :updated_at => Field::DateTime,
+    user: Field::BelongsTo,
+    line_items: Field::HasMany,
+    id: Field::Number,
+    order_date: Field::DateTime,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,6 +23,8 @@ class OrderDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :user,
+    :line_items,
+    :id,
     :order_date,
   ].freeze
 
@@ -30,6 +32,8 @@ class OrderDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :user,
+    :line_items,
+    :id,
     :order_date,
     :created_at,
     :updated_at,
@@ -39,8 +43,9 @@ class OrderDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :user,
+    :line_items,
     :order_date,
-    :users_id
   ].freeze
 
   # Overwrite this method to customize how orders are displayed

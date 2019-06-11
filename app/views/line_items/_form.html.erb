@@ -1,12 +1,13 @@
 
-<%= simple_form_for(@order_product) do |f| %>
+<%= simple_form_for(@line_item) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :products %>
-    <%= f.association :orders %>
+    <%= f.association :order %>
+    <%= f.association :product %>
     <%= f.input :quantity %>
+    <%= f.input :unit_price %>
   </div>
 
   <div class="form-actions">
