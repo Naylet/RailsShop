@@ -10,7 +10,7 @@
   <%= javascript_include_tag 'application' %>
 </head>
 
-<body class="<%= yield (:body_class) %>">
+<body class="<%= yield(:body_class) %>">
 <% if flash[:notice] %>
   <div class="notification is-success global-notification">
     <p class="notice"><%= notice %></p>
@@ -50,8 +50,6 @@
           <%# end %>
 
           <% if user_signed_in? %>
-            <%#= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
-
             <div class="navbar-item has-dropdown is-hoverable">
               <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
               <div class="navbar-dropdown is-right">
@@ -59,6 +57,7 @@
                 <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
               </div>
             </div>
+
           <% else %>
 
             <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>

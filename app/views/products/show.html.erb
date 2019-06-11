@@ -1,24 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="feature-img">
-  <%= image_tag(@product.image_url) if @product.image? %>
+<div class="button mv4">
+  <%= link_to 'Back', products_path %>
 </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="columns">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="column is-one-quarter">
+    <%= image_tag(@product.image_url(:default), alt: "Image") if @product.image? %>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  </div>
+
+  <div class="column is-three-quarters">
+    <div class="field">
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </div>
 
 
-<%= link_to 'Back', products_path %>
+    <div class="field">
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </div>
+
+
+    <div class="">
+      <strong>Price:</strong>
+      <%= number_to_currency( @product.price )%>
+    </div>
+  </div>
+
+  <%= button_to 'Add to card', '#', class: 'button is-warning' %>
+
+</div>
+
+
+

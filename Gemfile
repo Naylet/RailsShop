@@ -37,14 +37,12 @@ gem 'figaro'
 # gem 'capistrano-rails', group: :development
 
 gem 'administrate'
-# gem 'trestle'
 
-gem 'activeadmin'
 gem 'devise'
 gem 'cancancan'
 gem 'draper'
-gem 'pundit'
 
+gem 'pundit'
 
 gem 'simple_form'
 gem 'carrierwave'
