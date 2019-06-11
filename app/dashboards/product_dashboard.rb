@@ -14,6 +14,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::Text,
     price: Field::String.with_options(searchable: false),
+    image: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -38,6 +39,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :price,
     :category,
     :line_items,
+    :image
   ].freeze
 
   # FORM_ATTRIBUTES
