@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :orders
 
-
   def current_user_cart
     "cart#{id}"
   end
@@ -24,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def cart_count
-    quantities = $redis.hvals "cart #{id}"
+    quantities = $redis.hvals "cart#{id}"
     quantities.reduce(0) { |sum ,qty| sum + qty.to_i }
   end
 

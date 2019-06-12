@@ -1,0 +1,36 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Subtotal</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%@cart_products.each do |product, quantity|%>
+    <tr>
+      <td> <%= product.name %></td>
+      <td> <%= product.price %></td>
+      <td>
+        <%= link_to '+', add_to_cart_path(product), method: :put, class: "button" %>
+        <%= quantity %>
+        <%= link_to '-', remove_one_cart_path(product), method: :put,class: "button" %>
+      </td>
+
+      <td> <%= product.price * quantity.to_i %></td>
+      <td> <%= link_to 'Remove', remove_from_cart_path(product),method: :put, class: "button is-danger" %></td>
+    </tr>
+  <%end %>
+
+  <tr>
+    <td colspan="3">
+      <h5 class="is-right"> Total </h5>
+    </td>
+    <td>
+      <h5> <%= @cart_total %></h5>
+    </td>
+  </tr>
+  </tbody>
+</table>

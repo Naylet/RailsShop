@@ -27,6 +27,14 @@ Rails.application.routes.draw do
   resources :line_items, only: [:create, :update, :destroy]
   resources :categories, only: [:show]
 
+  get 'cart', to: 'cart#show'
+
+  resource :cart, only: [:show] do
+    put 'add/:product_id', to: 'cart#add', as: :add_to
+    put 'remove/:product_id', to: 'cart#remove', as: :remove_from
+    put 'remove_one/:product_id', to: 'cart#remove_one', as: :remove_one
+  end
+
   root to: 'products#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

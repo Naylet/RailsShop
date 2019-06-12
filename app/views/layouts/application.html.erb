@@ -38,16 +38,10 @@
       <div class="navbar-item">
         <div class="field is-grouped">
 
-          <%# if total_cart_items %>
-          <%#= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
-          <!--              <span class="icon is-small">-->
-          <!--                <i class="fa fa-shopping-cart"></i>-->
-          <!--              </span>-->
-          <!--              <span>Cart-->
-          <%#= cart_count_over_one %>
-          <!--                </span>-->
-          <%# end %>
-          <%# end %>
+          <%#= link_to 'Cart', cart_path, class:"navbar-link"%>
+          <%= link_to 'Cart (' + "#{current_user.cart_count}"+ ')', cart_path, class:"navbar-item button is-primary"%>
+
+
 
           <div class="navbar-item has-dropdown is-hoverable">
             <div class="navbar-link">Category</div>
