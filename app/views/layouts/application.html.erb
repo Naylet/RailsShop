@@ -37,12 +37,6 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
-
-          <%#= link_to 'Cart', cart_path, class:"navbar-link"%>
-          <%= link_to 'Cart (' + "#{current_user.cart_count}"+ ')', cart_path, class:"navbar-item button is-primary"%>
-
-
-
           <div class="navbar-item has-dropdown is-hoverable">
             <div class="navbar-link">Category</div>
 
@@ -55,10 +49,9 @@
             </div>
           </div>
 
-
-          <%#= select_tag(:category_name, options_for_select(Category.all), :prompt => "Select a Category") %>
-
           <% if user_signed_in? %>
+            <%= link_to 'Cart (' + "#{current_user.cart_count}"+ ')', cart_path, class:"navbar-item button is-primary"%>
+
             <div class="navbar-item has-dropdown is-hoverable">
               <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
               <div class="navbar-dropdown is-right is-boxed">
