@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  devise_for :admins
+
+
   namespace :admin do
       resources :users
       resources :products
@@ -23,7 +26,10 @@ Rails.application.routes.draw do
   end
 
 
-  resources :products
+  resources :products, only: [:index, :show]
+  resources :line_items, only: [:create, :update, :destroy]
+  resources :categories, only: [:show]
+
   root to: 'products#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
