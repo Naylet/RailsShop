@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="button mv4">
-  <%= link_to 'Back', products_path %>
+<div class="column">
+  <%= link_to 'Back', products_path, class: "button is-dark" %>
 </div>
 
 <div class="columns">
@@ -25,13 +25,15 @@
     </div>
 
 
-    <div class="">
+    <div class="field">
       <strong>Price:</strong>
       <%= number_to_currency( @product.price )%>
     </div>
+
   </div>
 
-  <%= button_to 'Add to card', '#', class: 'button is-warning' %>
+  <%= button_to 'Add to card', '#', class: 'button is-primary' %>
+
 
 </div>
 

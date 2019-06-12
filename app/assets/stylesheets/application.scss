@@ -30,8 +30,6 @@
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 
   .product {
-    border-left: 0;
-    border-top: 0;
     position: relative;
     min-height: 375px;
 
@@ -57,12 +55,6 @@
       &:hover {
         opacity: .9;
       }
-    }
-
-    .condition {
-      position: absolute;
-      bottom: 10px;
-      right: 9px;
     }
   }
 }
