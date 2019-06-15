@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users
 
   devise_for :users, controllers: {
-      registrations: 'registrations' ,
+      # registrations: 'registrations' ,
       confirmations: 'confirmations'
   }
 

@@ -10,7 +10,7 @@
   <%= javascript_include_tag 'application' %>
 </head>
 
-<body class="has-navbar-fixed-top">
+<body class="has-navbar-fixed-top is-light">
   <nav class="navbar is-fixed-top is-dark is-size-6" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand is-size-2 ml5">
@@ -25,9 +25,9 @@
           <%= form_tag(products_path, method: :get, class: 'search-form navbar-item') do %>
             <div class="field has-addons">
               <%= text_field_tag :search, params[:search], placeholder: "Search", class: ' input' %>
-              <%= button_tag type: "submit", class: 'button is-info fa-search' do %>
-                <!--                    <i class="fas fa-search"></i>-->
-                Search
+              <%= button_tag type: "submit", class: 'button is-info' do %>
+                <i class="fa fa-search"></i>
+                <!--                Search-->
               <% end %>
             </div>
           <% end %>
@@ -85,13 +85,15 @@
     </div>
   <% end %>
 
-  <div class="page-content mv4">
-    <div class="container">
-      <%= yield%>
+  <div class="page-content is-light is-fullheight">
+    <div class="mv4">
+      <div class="container">
+        <%= yield%>
+      </div>
     </div>
   </div>
 
-  <footer class = "navbar is-dark">
+  <footer class="navbar is-dark">
     <div class="navbar-item">
       &copy; 2019 Natalia Łukasiewicz
     </div>

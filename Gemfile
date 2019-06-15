@@ -47,6 +47,8 @@ gem 'pundit'
 gem 'simple_form' , "~> 4.1.0"
 gem 'carrierwave' , '~> 1.3.1'
 gem 'bulma-rails' , '~> 0.7.5'
+gem 'font-awesome-sass'
+gem "font-awesome-rails"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

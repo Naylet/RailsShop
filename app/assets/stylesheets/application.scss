@@ -15,8 +15,14 @@
  */
 
 @import "bulma";
+@import "font-awesome";
+@import "font-awesome-sprockets";
+@import "font-awesome-compass";
+@import "font-awesome";
+
 
 $navbar-height: 5rem;
+$footer-height: 4rem;
 
 html, body{
   height: 100%;
@@ -26,10 +32,35 @@ body{
   padding-top: $navbar-height !important;
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - #{$footer-height});
+  &.is-light{
+    background-color: #eeeeee;
+  }
 }
 
 nav.navbar{
   height: $navbar-height;
+}
+
+footer.navbar{
+  margin-top: auto;
+  justify-content: center;
+  margin-bottom: 0;
+  height: fit-content;
+  min-height: unset;
+}
+
+
+.page-content{
+  &.is-light{
+    background-color: #eeeeee;
+  }
+}
+
+
+footer .navbar-item{
+  color: white;
+  height: $footer-height;
 }
 
 .notification {
@@ -47,6 +78,7 @@ nav.navbar{
   .product {
     position: relative;
     min-height: 375px;
+    background-color: white;
 
     .title {
       font-size: 20px;
@@ -61,7 +93,7 @@ nav.navbar{
 
   .product-thumb {
     position: relative;
-    max-height:375px;
+    max-height:350px;
     overflow: hidden;
 
     img {
@@ -74,12 +106,3 @@ nav.navbar{
   }
 }
 
-
-footer {
-  margin-top: auto;
-  justify-content: center;
-}
-
-footer .navbar-item{
-  color: white;
-}
