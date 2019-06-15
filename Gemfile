@@ -36,6 +36,11 @@ gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Pagination
+gem 'kaminari'
+gem 'kaminari-actionview'
+
+
 gem 'administrate' , '~> 0.11.0'
 
 gem 'devise', '~> 4.6.2'
