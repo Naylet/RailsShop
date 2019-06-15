@@ -58,3 +58,18 @@
     }
   }
 }
+
+
+footer {
+  margin-top: auto;
+}
+
+footer .navbar-item{
+  color: white;
+}
+
+.content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

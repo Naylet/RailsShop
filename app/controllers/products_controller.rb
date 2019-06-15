@@ -5,7 +5,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.order("created_at desc")
+    if params[:search].present?
+      @products = Product.where('name LIKE ?', "%#{params[:search]}%")
+                      .or(Product.where('description LIKE ?', "%#{params[:search]}%")).order('created_at DESC')
+    else
+      @products = Product.all.order("created_at desc")
+
+    end
   end
 
   # GET /products/1
@@ -70,6 +76,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :price, :image)
+      params.require(:product).permit(:searcg, :name, :description, :price, :image)
     end
 end

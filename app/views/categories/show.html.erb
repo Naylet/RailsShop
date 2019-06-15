@@ -1,18 +1,17 @@
 
-<h1 class="f2 mt4">
+<h1 class="f2">
   <strong> Category: <%= @products.first.category.name %> </strong>
 </h1>
 
 <div class="product-index-grid pt4">
-
   <% @products.each do |product| %>
-    <div class="product border-light">
+    <div class="product border ml1">
       <div class="product-thumb" >
         <%= link_to image_tag(product.image_url(:thumb), alt: "Image"), product if product.image? %>
       </div>
 
       <div class="pa3">
-        <h5 class="fw7 f4 title"><%= link_to product.name, product  %></h5>
+        <h5 class="f4 title"><%= link_to product.name, product, class: "button is-white is-fullwidth"%></h5>
         <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(product.price) %></p>
       </div>
     </div>
