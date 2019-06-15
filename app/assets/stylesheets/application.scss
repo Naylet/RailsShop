@@ -16,6 +16,21 @@
 
 @import "bulma";
 
+$navbar-height: 5rem;
+
+html, body{
+  height: 100%;
+}
+
+body{
+  padding-top: $navbar-height !important;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.navbar{
+  height: $navbar-height;
+}
 
 .notification {
   border-radius: 0;
@@ -62,14 +77,9 @@
 
 footer {
   margin-top: auto;
+  justify-content: center;
 }
 
 footer .navbar-item{
   color: white;
-}
-
-.content{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }

@@ -21,5 +21,10 @@ class CartController < ApplicationController
     current_user.remove_one_from_cart(params[:product_id])
     redirect_to cart_path
   end
+
+  def order_products
+    current_user.purchase_cart_products
+    redirect_to products_path
+  end
   
 end

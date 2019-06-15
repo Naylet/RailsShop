@@ -1,36 +1,52 @@
-<table class="table">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Quantity</th>
-    <th>Subtotal</th>
-  </tr>
-  </thead>
+<!--//if cart product lenght  = 0 to wyświetl info że puste-->
+<!--//else to co niżej-->
 
-  <tbody>
-  <%@cart_products.each do |product, quantity|%>
+<%if @cart_products.length == 0 %>
+  <div class="notification is-warning">
+    No products in cart.
+  </div>
+<%else %>
+
+  <table class="table is-fullwidth">
+    <thead>
     <tr>
-      <td> <%= product.name %></td>
-      <td> <%= product.price %></td>
-      <td>
-        <%= link_to '+', add_to_cart_path(product), method: :put, class: "button" %>
-        <%= quantity %>
-        <%= link_to '-', remove_one_cart_path(product), method: :put,class: "button" %>
-      </td>
-
-      <td> <%= product.price * quantity.to_i %></td>
-      <td> <%= link_to 'Remove', remove_from_cart_path(product),method: :put, class: "button is-danger" %></td>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
     </tr>
-  <%end %>
+    </thead>
 
-  <tr>
-    <td colspan="3">
-      <h5 class="is-right"> Total </h5>
-    </td>
-    <td>
-      <h5> <%= @cart_total %></h5>
-    </td>
-  </tr>
-  </tbody>
-</table>
+    <tbody>
+    <%@cart_products.each do |product, quantity|%>
+      <tr>
+        <td> <%= product.name %></td>
+        <td> <%= product.price %></td>
+        <td>
+          <%= link_to '+', add_to_cart_path(product), method: :put, class: "button is-small" %>
+          <%= quantity %>
+          <%= link_to '-', remove_one_cart_path(product), method: :put,class: "button is-small" %>
+        </td>
+
+        <td> <%= product.price * quantity.to_i %></td>
+        <td> <%= link_to 'Remove', remove_from_cart_path(product),method: :put, class: "button is-danger is-small" %></td>
+      </tr>
+    <%end %>
+
+    <tr>
+      <td colspan="3">
+        <h5 class="has-text-right"> Total </h5>
+      </td>
+      <td colspan="2">
+        <h5> <%= @cart_total %></h5>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="colums">
+    <%= link_to 'Order', order_products_cart_path, method: :post, class: "button is-primary" %>
+  </div>
+
+<%end %>
+

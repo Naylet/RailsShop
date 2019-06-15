@@ -1,15 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :admin_users
-  namespace :admin do
-      resources :users
-      resources :products
-      resources :orders
-      resources :line_items
-      resources :categories
-
-      root to: "users#index"
-  end
 
   devise_for :users, controllers: {
       registrations: 'registrations' ,
@@ -22,6 +13,15 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'devise/sessions#destroy'
   end
 
+  namespace :admin do
+    resources :users
+    resources :products
+    resources :orders
+    resources :line_items
+    resources :categories
+
+    root to: "users#index"
+  end
 
   resources :products, only: [:index, :show]
   resources :line_items, only: [:create, :update, :destroy]
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     put 'add/:product_id', to: 'cart#add', as: :add_to
     put 'remove/:product_id', to: 'cart#remove', as: :remove_from
     put 'remove_one/:product_id', to: 'cart#remove_one', as: :remove_one
+    post 'order_products', to:'cart#order_products', as: :order_products
   end
 
   root to: 'products#index'
