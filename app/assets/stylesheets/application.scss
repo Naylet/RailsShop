@@ -83,6 +83,12 @@ footer .navbar-item{
     .title {
       font-size: 20px;
       line-height: 1.6rem;
+
+      //a:hover{
+      //  background-color: transparent;
+      //  color: #2E2F30;
+      //
+      //}
     }
     .price {
       position: absolute;
@@ -104,5 +110,10 @@ footer .navbar-item{
       }
     }
   }
+}
+
+a:hover{
+  background-color: transparent;
+  color: black;
 }
 
