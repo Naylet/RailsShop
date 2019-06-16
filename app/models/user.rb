@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
 
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   def current_user_cart
     "cart#{id}"
