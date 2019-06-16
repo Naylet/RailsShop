@@ -26,6 +26,7 @@ class LineItemDashboard < Administrate::BaseDashboard
     :order,
     :product,
     :quantity,
+    :unit_price
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
