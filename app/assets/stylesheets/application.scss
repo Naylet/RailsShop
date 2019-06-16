@@ -77,18 +77,12 @@ footer .navbar-item{
 
   .product {
     position: relative;
-    min-height: 375px;
+    min-height: 350px;
     background-color: white;
 
     .title {
       font-size: 20px;
       line-height: 1.6rem;
-
-      //a:hover{
-      //  background-color: transparent;
-      //  color: #2E2F30;
-      //
-      //}
     }
     .price {
       position: absolute;

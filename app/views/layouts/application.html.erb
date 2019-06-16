@@ -35,7 +35,7 @@
           <div class="navbar-item has-dropdown is-hoverable">
             <div class="navbar-link">Category</div>
             <div class="navbar-dropdown is-right is-boxed">
-              <%= link_to "All", products_path, class:"navbar-item" %>
+              <%= link_to "All", root_path, class:"navbar-item" %>
               <% Category.all.each do |category| %>
                 <%= link_to category.name, category_path(category), class:"navbar-item" %>
               <%end%>

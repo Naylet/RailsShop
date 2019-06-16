@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @products = @category.products.all
+    @products = @products.order("created_at desc").page(params[:page]).per(5)
   end
 
 

@@ -12,13 +12,14 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
-    @products = @products.order("created_at desc").page(params[:page]).per(10)
+    @products = @products.order("created_at desc").page(params[:page]).per(5)
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
   end
+
 
   # GET /products/new
   def new
@@ -77,6 +78,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:search, :name, :description, :price, :image)
+      params.require(:product).permit(:name, :description, :price, :image)
     end
 end
