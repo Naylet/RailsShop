@@ -44,11 +44,13 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+
 production:
-  <<: *default
-  database: RailsShop_production
-  username: RailsShop
-  password: <%= ENV['RAILSSHOP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+#
+#production:
+#  <<: *default
+#  database: RailsShop_production
+#  username: RailsShop
+#  password: <%= ENV['RAILSSHOP_DATABASE_PASSWORD'] %>
