@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :line_items, only: [:create, :update, :destroy]
-  resources :categories, only: [:show]
+  # resources :categories, only: [:show]
 
-  # get 'products/category/:id', to:'categories#show', as: :category
+  get 'products/category/:id', to:'categories#show', as: :category
 
   get 'cart', to: 'cart#show'
 
