@@ -18,7 +18,6 @@
 //= require_tree .
 
 $(function() {
-
     $('.navbar-burger').click(function() {
         // Get the target from the "data-target" attribute
         var $target = $('#' + $(this).data('target'));
