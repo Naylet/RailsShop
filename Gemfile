@@ -55,7 +55,9 @@ gem 'bulma-rails' , '~> 0.7.5'
 gem 'font-awesome-sass'
 gem "font-awesome-rails"
 
+#Amazon Web Services
 gem 'aws-sdk-s3'
+gem "fog-aws"
 
 gem 'rails_12factor', group: :production
 
