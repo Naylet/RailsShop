@@ -12,12 +12,12 @@
             <div class="field">
               <label class="label">Email</label>
               <div class="control has-icons-left">
-                <%= f.input_field :email, required: true, class:"input" %>
+                <%= f.input_field :email, required: true, class:"input", label:false %>
                 <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 </span>
-
               </div>
+              <div class="error"><%= f.error :email  if f.error :email  %></div>
             </div>
 
             <div class="field">
@@ -28,6 +28,8 @@
                   <i class="fa fa-lock"></i>
                 </span>
               </div>
+              <div class="error"><%= f.error :password  if f.error :password  %></div>
+
             </div>
 
             <div class="field">
@@ -38,6 +40,7 @@
                   <i class="fa fa-lock"></i>
                 </span>
               </div>
+              <div class="error"><%= f.error :password_confirmation  if f.error :password_confirmation  %></div>
             </div>
 
             <div class="field">
