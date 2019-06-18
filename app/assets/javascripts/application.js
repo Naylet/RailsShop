@@ -17,7 +17,17 @@
 //= require turbolinks
 //= require_tree .
 
+$(function() {
 
+    $('.navbar-burger').click(function() {
+        // Get the target from the "data-target" attribute
+        var $target = $('#' + $(this).data('target'));
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $(this).toggleClass('is-active');
+        $target.toggleClass('is-active');
+    });
+});
 
 $(function(){
     $(".delete").click(function () {

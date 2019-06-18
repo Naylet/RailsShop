@@ -61,6 +61,9 @@ footer.navbar{
 footer .navbar-item{
   color: white;
   height: $footer-height;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .notification {

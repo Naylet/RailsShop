@@ -17,11 +17,17 @@
       <%= link_to root_path, class:"navbar-item" do %>
         <h1>Movie Shop</h1>
       <% end  %>
+
+      <div class="navbar-burger burger" data-target="navbarMenuHeroA">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navbarMenuHeroA">
       <div class="navbar-end">
-        <div class="navbar-item mr6">
+        <div class="navbar-item">
           <%= form_tag(products_path, method: :get, class: 'search-form navbar-item') do %>
             <div class="field has-addons">
               <%= text_field_tag :search, params[:search], placeholder: "Search", class: ' input' %>

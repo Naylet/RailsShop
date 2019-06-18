@@ -8,10 +8,9 @@
 
   <div class="column is-one-quarter">
     <%= image_tag(@product.image_url(:default), alt: "Image") if @product.image? %>
-
   </div>
 
-  <div class="column is-three-quarters">
+  <div class="column">
     <div class="field">
       <strong>Name:</strong>
       <%= @product.name %>
@@ -31,7 +30,9 @@
 
   </div>
 
-  <%= button_to 'Add to card', add_to_cart_path(@product), method: :put, class: 'button is-primary' %>
+  <div class="column is-one-fifth">
+    <%= button_to 'Add to card', add_to_cart_path(@product), method: :put, class: 'button is-primary' %>
+  </div>
 
 
 </div>
