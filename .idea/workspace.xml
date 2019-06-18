@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5606cadb-5483-4ab1-809f-2bcecafbe247" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/RailsShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RailsShop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -22,29 +20,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="580">
+              <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
+            <state relative-caret-position="1092">
               <caret line="100" column="35" lean-forward="true" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="873">
-              <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+            <state relative-caret-position="1005">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -111,11 +109,11 @@
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/environments/test.rb" />
         <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/categories/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
       </list>
     </option>
@@ -179,6 +177,12 @@
               <item name="RailsShop" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="environments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RailsShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RailsShop" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,12 +341,12 @@
       <workItem from="1560355095839" duration="18794000" />
       <workItem from="1560593063258" duration="37015000" />
       <workItem from="1560634625686" duration="9767000" />
-      <workItem from="1560845718838" duration="286000" />
+      <workItem from="1560845718838" duration="768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116719000" />
+    <option name="totallyTimeSpent" value="117201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="158" y="43" width="3682" height="2117" extended-state="6" />
@@ -514,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190611161314_add_image_to_products.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -602,9 +599,6 @@
     <entry file="file://$PROJECT_DIR$/config/boot.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/storage.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/spring.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -628,12 +622,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/storage.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -644,8 +634,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
+        <state relative-caret-position="1092">
           <caret line="100" column="35" lean-forward="true" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
         </state>
       </provider>
     </entry>
