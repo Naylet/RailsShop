@@ -81,4 +81,4 @@ Below command to create an admin user called admin with password admin123.
 AdminUser.create(email:"admin",password:"admin123");
 ```
 
-Admin panel under localhost:3000/admin
+Admin panel after running server under localhost:3000/admin
